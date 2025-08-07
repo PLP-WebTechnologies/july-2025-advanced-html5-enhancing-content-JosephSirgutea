@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enhanced HTML5 Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0 auto;
+      max-width: 800px;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    header, footer {
+      background-color: #f4f4f4;
+      padding: 15px;
+      text-align: center;
+    }
+    form {
+      background: #f9f9f9;
+      padding: 20px;
+      border: 1px solid #ddd;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table, th, td {
+      border: 1px solid #aaa;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>User Registration Portal</h1>
+  <p>Complete the form below to register</p>
+</header>
+
+<main>
+
+  <section>
+    <h2>Personal Information</h2>
+    <form action="/submit" method="post" autocomplete="on">
+
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="firstname" placeholder="Otieno" required>
+
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lastname" placeholder="Bildad" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="bildad@example.com" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required minlength="6">
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" required>
+        <option value="">-- Select --</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label for="bio">Short Bio:</label>
+      <textarea id="bio" name="bio" placeholder="Tell us about yourself..." rows="4"></textarea>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" placeholder="+2547XXXXXXXX" pattern="^\+254[0-9]{9}$" required>
+
+      <label for="readonly-example">Referral Code:</label>
+      <input type="text" id="readonly-example" value="REF12345" readonly>
+
+      <label>
+        <input type="checkbox" name="terms" required>
+        I agree to the Terms and Conditions
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Benefits of Registering</h2>
+    <ul>
+      <li>Access to exclusive content</li>
+      <li>Monthly newsletters</li>
+      <li>Discounts on new products</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Plan Comparison</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Basic</th>
+          <th>Premium</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Free Downloads</td>
+          <td>5/month</td>
+          <td>Unlimited</td>
+        </tr>
+        <tr>
+          <td>Support</td>
+          <td>Email only</td>
+          <td>24/7 Chat</td>
+        </tr>
+        <tr>
+          <td>Access to Beta Features</td>
+          <td>No</td>
+          <td>Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Watch Our Intro</h2>
+    <video width="100%" controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 YourCompany. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
